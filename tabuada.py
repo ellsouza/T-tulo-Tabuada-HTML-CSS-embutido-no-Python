@@ -1,11 +1,11 @@
-from __future__ import annotations
+from typing import Optional
 
 from flask import Flask, request
 
 app = Flask(__name__)
 
 
-def _render(n: int | None = None, error: str | None = None) -> str:
+def _render(n: Optional[int] = None, error: Optional[str] = None) -> str:
     tabuada_html = ""
     pares_html = ""
 
