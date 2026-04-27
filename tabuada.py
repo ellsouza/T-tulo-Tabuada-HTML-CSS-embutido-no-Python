@@ -1,3 +1,5 @@
+from flask import Flask 
+app = Flask(__name__)
 import html as _html
 
 codigo = """#for 
@@ -58,6 +60,12 @@ html = f"""<!doctype html>
     <pre>{codigo_html}</pre>
   </div>
 </body>
+</html>
+"""
+
+@app.get("/")
+def index():
+    return html 
 </html>
 """
 
